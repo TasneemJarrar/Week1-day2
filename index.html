@@ -6,21 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BinX Tech FrontEnd Internship</title>
   <link rel="icon" type="image/x-icon" href="./img/BinxTech.ico">
+  <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 
   <meta property="og:title" content="BinX Tech Frontend Internship">
   <meta property="og:description" content="A structured, project-driven internship program.">
   <meta property="og:image" content="./img/BinxTech.ico">
 
-
-
-
 </head>
 
 <body>
 
-  <header>
+  <header class="navbar">
     <h1>BinX Tech Internship</h1>
-    <nav aria-label="Navigation Bar">
+    <nav class="nav" aria-label="Navigation Bar">
       <a href="#">Home</a>
       <a href="#about">About</a>
       <a href="#contact-form">Contact</a>
@@ -29,48 +32,75 @@
   </header>
 
   <main>
-    <article>
-      <div id="about">
-        <h2>FrontEnd Internship - Week1 / Day2</h2>
-        <p>A structured, project-driven internship program.</p>
-      </div>
-      <p>Conatct Form</p>
-      <form id="contact-form">
-        <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" name="fullname" required placeholder="Tasneem Jarrar" />
+    <div class="about" id="about">
+      <h2>FrontEnd Internship - <span>Week1 / Day2</span></h2>
+      <p>A structured, project-driven internship program.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Natus facilis fuga laborum quasi libero dolores explicabo, voluptatibus a vitae ex pariatur iste impedit
+        suscipit doloremque facere et. Quisquam, pariatur voluptatem.Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Aut quibusdam quos cumque. Temporibus, id commodi. Animi labore, cupiditate modi quasi vero omnis.
+        Eveniet, error corporis non, quod iste doloribus molestias a dolorum itaque fugiat tenetur facilis maiores
+        similique commodi voluptatum magnam nihil atque, amet consectetur. Reiciendis natus quasi deserunt quibusdam.
+      </p>
+    </div>
+    <div class="container">
+      <article>
+        <div class="contactFormContainer">
+          <p>Get in Touch</p>
+          <form class="contactForm" id="contact-form">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Tasneem Jarrar" />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="email@gmail.com" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="email@gmail.com" />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
+            <fieldset>
+              <legend>Reasn For Contact</legend>
 
-        <fieldset>
-          <legend>Reasn For Contact</legend>
+              <div class="reasons">
+                <div class="reason">
+                  <input type="radio" id="generalInquiry" name="reaonOFContact" value="generalInquiry" />
+                  <label for="generalInquiry">General Inquiry</label>
+                </div>
+                <div class="reason">
+                  <input type="radio" id="internship" name="reaonOFContact" value="internship" />
+                  <label for="internship">Internship Application</label>
+                </div>
+                <div class="reason">
+                  <input type="radio" id="feedback" name="reaonOFContact" value="feedback" />
+                  <label for="feedback">Feedback</label>
+                </div>
+              </div>
+            </fieldset>
 
-          <label for="generalInquiry">General Inquiry</label>
-          <input type="radio" id="generalInquiry" name="reaonOFContact" value="generalInquiry" />
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
 
-          <label for="internship">Internship Application</label>
-          <input type="radio" id="internship" name="reaonOFContact" value="internship" />
+            <button type="submit" class="submitbtn">Send Message</button>
 
-          <label for="feedback">Feedback</label>
-          <input type="radio" id="feedback" name="reaonOFContact" value="feedback" />
+          </form>
+        </div>
+      </article>
 
-        </fieldset>
-      </form>
-    </article>
-
-    <aside id="location" aria-label="Our Location">
-      <iframe title="PTUK Map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.949757549092!2d35.02282699999999!3d32.31320350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d177a1c3fc39b%3A0xb19b1b0e711b2107!2sPalestine%20Technical%20University%20%E2%80%93%20Kadoorie!5e0!3m2!1sen!2s!4v1784558652001!5m2!1sen!2s"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </aside>
+      <aside class="sidebar" id="location" aria-label="Our Location">
+        <p>Find Us!</p>
+        <iframe title="PTUK Map" class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.949757549092!2d35.02282699999999!3d32.31320350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d177a1c3fc39b%3A0xb19b1b0e711b2107!2sPalestine%20Technical%20University%20%E2%80%93%20Kadoorie!5e0!3m2!1sen!2s!4v1784558652001!5m2!1sen!2s"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </aside>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 BinX Tech</p>
+  <footer class="footer">
+    <p class="company">BinX Tech</p>
+    <p class="copyrights">&copy; 2026 BinX Tech</p>
+    <div class="links">
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 
